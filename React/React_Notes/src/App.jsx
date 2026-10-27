@@ -1,43 +1,46 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-function App() {
-  const [showMessage, setShowMessage] = useState(true);
-  const [count, setCount] = useState(0);
-  const [message, setMessage] = useState("");
 
-  function handleToggle() {
-    setShowMessage((prev) => !prev);
+function LearnEvent() {
+  /*
+   * Normal - js - click
+   * React - js - onClick, onInput, onChange, onSubmit, onKeypress, onMouseover
+   */
+
+
+  const [text, setText] = useState("");
+
+
+  function handleClick() {
+    alert("Hello Everyone ");
   }
 
-  function handleIncrement() {
-    if ((count+1)%5!=0){
-      setCount((prev) => prev + 1);
-      setMessage("");
-    } else {
-      setCount((prev) => prev + 2);
-      setMessage("Skipped multiple of 5");
-    }
+
+  function handleChange(e) {
+    setText(e.target.value);
   }
 
-  function handleDecrement() {
-    if ((count-1)%5!=0){
-      setCount((prev) => prev - 1);
-      setMessage("");
-    } else {
-      setCount((prev) => prev - 2);
-      setMessage("Skipped multiple of 5");
-    }
+
+  function handleClear() {
+    setText("");
   }
+
+
   return (
     <div>
-      <h1>{count}</h1>
-      {message && <p role="status">{message}</p>}
-      {showMessage && <h1>Sorry</h1>}
-      <button onClick={handleToggle}>{showMessage ? "Remove" : "Show"}</button>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
+      {/* Click */}
+      <button onClick={handleClick}>ShowAlert</button>
+
+
+      {/* onChange */}
+      <input type="text" value={text} onChange={handleChange} />
+      <h1>{text}</h1>
+
+
+      <button onClick={handleClear}>ClearAll</button>
     </div>
   );
 }
 
-export default App;
+
+export default LearnEvent;
