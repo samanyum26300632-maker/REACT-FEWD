@@ -1,7 +1,9 @@
 // What are Props in React?
-// Props (short for properties) in React are used to pass data from one component to another, usually from a parent component to a child component.
+// Props (short for properties) in React are used to pass data from one component to another,
+//  usually from a parent component to a child component.
 
-// Props make components reusable by allowing us to pass different values to the same component.
+// Props make components reusable by allowing us to pass different values to the same
+//  component.
 
 // 4. Important Rules of Props
 // 1. Props are used to pass data from parent components to child components.
@@ -18,5 +20,6 @@
 
 // This produces the same output but is shorter and easier to read.
 // In Simple Words
-// Props in React are like arguments in a function. Just as we pass arguments to a function, we pass props to a component to provide it with data.
+// Props in React are like arguments in a function. Just as we pass arguments to a function,
+//  we pass props to a component to provide it with data.
 
